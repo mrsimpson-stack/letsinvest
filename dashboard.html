@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fundesia AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="ai-icon">⎈</span>
+                <h3>Fundesia<span class="ai-text">AI</span></h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
+                    <li><a href="#invest"><i class="icon-invest"></i> Invest</a></li>
+                    <li><a href="#deposit"><i class="icon-deposit"></i> Deposit</a></li>
+                    <li><a href="#withdraw"><i class="icon-withdraw"></i> Withdraw</a></li>
+                    <li><a href="#history"><i class="icon-history"></i> History</a></li>
+                    <li><a href="#profile"><i class="icon-profile"></i> Profile</a></li>
+                    <li><a href="index.html"><i class="icon-logout"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h2>Dashboard</h2>
+                <div class="user-profile">
+                    <span>Welcome, <strong id="username">User</strong></span>
+                    <div class="avatar">U</div>
+                </div>
+            </header>
+
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Main Balance</h3>
+                    <p id="mainBalance">UGX 0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Today's Earnings</h3>
+                    <p id="todayEarnings">UGX 0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Earnings</h3>
+                    <p id="totalEarnings">UGX 2,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Investment</h3>
+                    <p id="activeInvestment">UGX 0</p>
+                </div>
+            </div>
+
+            <div class="dashboard-sections">
+                <section class="invest-section">
+                    <h3>Investment Packages</h3>
+                    <div class="packages-grid">
+                        <div class="package-card">
+                            <h4>Basic</h4>
+                            <p class="amount">UGX 10,000</p>
+                            <p class="returns">Earn UGX 1,500 daily</p>
+                            <button class="btn-invest" data-package="10000">Invest Now</button>
+                        </div>
+                        <div class="package-card">
+                            <h4>Starter</h4>
+                            <p class="amount">UGX 30,000</p>
+                            <p class="returns">Earn UGX 2,500 daily</p>
+                            <button class="btn-invest" data-package="30000">Invest Now</button>
+                        </div>
+                        <!-- More package cards -->
+                    </div>
+                </section>
+
+                <section class="transaction-section">
+                    <div class="transaction-tabs">
+                        <button class="tab-btn active" data-tab="deposit">Deposit</button>
+                        <button class="tab-btn" data-tab="withdraw">Withdraw</button>
+                    </div>
+
+                    <div id="depositTab" class="tab-content active">
+                        <form id="depositForm">
+                            <div class="form-group">
+                                <label>Deposit to:</label>
+                                <p>0749641847 or 0764803976 (MTN/Airtel - Tumugabirwe Fundesia)</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="depositAmount">Amount (UGX)</label>
+                                <input type="number" id="depositAmount" name="depositAmount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="depositNumber">Payment Number</label>
+                                <input type="tel" id="depositNumber" name="depositNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="depositScreenshot">Payment Screenshot</label>
+                                <input type="file" id="depositScreenshot" name="depositScreenshot" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Submit Deposit Request</button>
+                        </form>
+                    </div>
+
+                    <div id="withdrawTab" class="tab-content">
+                        <form id="withdrawForm">
+                            <div class="form-group">
+                                <label for="withdrawAmount">Amount (UGX)</label>
+                                <input type="number" id="withdrawAmount" name="withdrawAmount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawNumber">Withdrawal Number</label>
+                                <input type="tel" id="withdrawNumber" name="withdrawNumber" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Request Withdrawal</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
