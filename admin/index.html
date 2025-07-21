@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Fundesia AI</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <span class="ai-icon">⎈</span>
+                <h3>Fundesia<span class="ai-text">AI</span> Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active"><a href="index.html"><i class="icon-dashboard"></i> Dashboard</a></li>
+                    <li><a href="users.html"><i class="icon-users"></i> Users</a></li>
+                    <li><a href="#transactions"><i class="icon-transactions"></i> Transactions</a></li>
+                    <li><a href="#settings"><i class="icon-settings"></i> Settings</a></li>
+                    <li><a href="../index.html"><i class="icon-logout"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
 
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-actions">
+                    <button class="btn-refresh"><i class="icon-refresh"></i> Refresh</button>
+                </div>
+            </header>
+
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <h3>Total Users</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+                <div class="admin-stat-card">
+                    <h3>Active Investments</h3>
+                    <p id="activeInvestments">0</p>
+                </div>
+                <div class="admin-stat-card">
+                    <h3>Pending Deposits</h3>
+                    <p id="pendingDeposits">0</p>
+                </div>
+                <div class="admin-stat-card">
+                    <h3>Pending Withdrawals</h3>
+                    <p id="pendingWithdrawals">0</p>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <!-- Activity items will be added dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
